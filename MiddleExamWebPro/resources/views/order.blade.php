@@ -88,7 +88,7 @@
           <div class="col-lg-6 menu-item filter-starters">
             <button type="min" class="btn btn-light">-</button>
             <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="min" class="btn btn-light">+</button>
+            <button type="plus" class="btn btn-light">+</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
@@ -104,7 +104,7 @@
           <div class="col-lg-6 menu-item filter-specialty">
             <button type="min" class="btn btn-light">-</button>
             <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="min" class="btn btn-light">+</button>
+            <button type="plus" class="btn btn-light">+</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-starters">
@@ -120,7 +120,7 @@
           <div class="col-lg-6 menu-item filter-starters">
             <button type="min" class="btn btn-light">-</button>
             <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="min" class="btn btn-light">+</button>
+            <button type="plus" class="btn btn-light">+</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
@@ -136,7 +136,7 @@
           <div class="col-lg-6 menu-item filter-salads">
             <button type="min" class="btn btn-light">-</button>
             <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="min" class="btn btn-light">+</button>
+            <button type="plus" class="btn btn-light">+</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
@@ -152,7 +152,7 @@
           <div class="col-lg-6 menu-item filter-specialty">
             <button type="min" class="btn btn-light">-</button>
             <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="min" class="btn btn-light">+</button>
+            <button type="plus" class="btn btn-light">+</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-starters">
@@ -168,7 +168,7 @@
           <div class="col-lg-6 menu-item filter-starters">
             <button type="min" class="btn btn-light">-</button>
             <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="min" class="btn btn-light">+</button>
+            <button type="plus" class="btn btn-light">+</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
@@ -184,7 +184,7 @@
           <div class="col-lg-6 menu-item filter-salads">
             <button type="min" class="btn btn-light">-</button>
             <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="min" class="btn btn-light">+</button>
+            <button type="plus" class="btn btn-light">+</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
@@ -200,7 +200,7 @@
           <div class="col-lg-6 menu-item filter-salads">
             <button type="min" class="btn btn-light">-</button>
             <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="min" class="btn btn-light">+</button>
+            <button type="plus" class="btn btn-light">+</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
@@ -216,16 +216,16 @@
           <div class="col-lg-6 menu-item filter-specialty">
             <button type="min" class="btn btn-light">-</button>
             <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="min" class="btn btn-light">+</button>
+            <button type="plus" class="btn btn-light">+</button>
           </div>
 
-          <div class="col-lg-6 menu-item filter-specialty">
+          <div class="col-lg-6 menu-item filter-starters filter-salads filter-specialty">
             <div class="menu-content">
               <p>Total Order</p>
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-specialty">
+          <div class="col-lg-6 menu-item filter-starters filter-salads filter-specialty">
             <input type="text" name="totalorder" class="form-input" placeholder="0">
           </div>
         </div>
