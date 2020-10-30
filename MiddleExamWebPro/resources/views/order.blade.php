@@ -41,7 +41,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Restaurantly</a></h1>
+      <h1 class="logo mr-auto"><a href="index.html">Choose Your Order</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -55,19 +55,184 @@
   </header><!-- End Header -->
 
   <main id="main">
-    <section class="breadcrumbs">
-      <div class="container">
+  <section id="menu" class="menu section-bg">
+      <div class="container" data-aos="fade-up">
 
+        <div class="section-title">
+          <p>:Menu:</p>
+        </div>
 
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-starters">Starters</li>
+              <li data-filter=".filter-salads">Salads</li>
+              <li data-filter=".filter-specialty">Specialty</li>
+            </ul>
+          </div>
+        </div>
 
-      </div>
-    </section>
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
 
-    <section class="inner-page">
-      <div class="container">
-        <p>
-          Example inner page template
-        </p>
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Lobster Bisque</a><span>$5.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <button type="min" class="btn btn-light">-</button>
+            <input type="text" name="count" class="form-input" placeholder="0">
+            <button type="min" class="btn btn-light">+</button>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <img src="assets/img/menu/bread-barrel.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Bread Barrel</a><span>$6.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <button type="min" class="btn btn-light">-</button>
+            <input type="text" name="count" class="form-input" placeholder="0">
+            <button type="min" class="btn btn-light">+</button>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="assets/img/menu/cake.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Crab Cake</a><span>$7.95</span>
+            </div>
+            <div class="menu-ingredients">
+              A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <button type="min" class="btn btn-light">-</button>
+            <input type="text" name="count" class="form-input" placeholder="0">
+            <button type="min" class="btn btn-light">+</button>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <img src="assets/img/menu/caesar.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Caesar Selections</a><span>$8.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <button type="min" class="btn btn-light">-</button>
+            <input type="text" name="count" class="form-input" placeholder="0">
+            <button type="min" class="btn btn-light">+</button>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <img src="assets/img/menu/tuscan-grilled.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Tuscan Grilled</a><span>$9.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Grilled chicken with provolone, artichoke hearts, and roasted red pesto
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <button type="min" class="btn btn-light">-</button>
+            <input type="text" name="count" class="form-input" placeholder="0">
+            <button type="min" class="btn btn-light">+</button>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="assets/img/menu/mozzarella.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Mozzarella Stick</a><span>$4.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <button type="min" class="btn btn-light">-</button>
+            <input type="text" name="count" class="form-input" placeholder="0">
+            <button type="min" class="btn btn-light">+</button>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <img src="assets/img/menu/greek-salad.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Greek Salad</a><span>$9.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Fresh spinach, crisp romaine, tomatoes, and Greek olives
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <button type="min" class="btn btn-light">-</button>
+            <input type="text" name="count" class="form-input" placeholder="0">
+            <button type="min" class="btn btn-light">+</button>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <img src="assets/img/menu/spinach-salad.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Spinach Salad</a><span>$9.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <button type="min" class="btn btn-light">-</button>
+            <input type="text" name="count" class="form-input" placeholder="0">
+            <button type="min" class="btn btn-light">+</button>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <img src="assets/img/menu/lobster-roll.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Lobster Roll</a><span>$12.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <button type="min" class="btn btn-light">-</button>
+            <input type="text" name="count" class="form-input" placeholder="0">
+            <button type="min" class="btn btn-light">+</button>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <div class="menu-content">
+              <p>Total Order</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <input type="text" name="totalorder" class="form-input" placeholder="0">
+          </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+            <button type="submit order" class="btn btn-outline-light btn-block">SUBMIT ORDER</button>
+        </div>
       </div>
     </section>
 
