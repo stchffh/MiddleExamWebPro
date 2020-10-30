@@ -57,102 +57,79 @@
   </header><!-- End Header -->
 
   <main id="main">
-    <section class="inner-page">
-      <div class="container">
-        <div class="d-flex justify-content-center align-items-center mt-5">
-          <div class="card">
-            <div class="card-header">
-                <h3 class="text-center">Profile</h3>
-            </div>
-            <div class="card-body">
-                <form method="POST" action="{{ route('profile') }}">
-                    @method('patch')
-                    @csrf
-
-                    <div class="form-group row">
-                        <label for="name" class="col-md-3 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                        <div class="col-md-9">
-                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', $user->name) }}" autocomplete="name" autofocus>
-
-                            @error('name')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="email" class="col-md-3 col-form-label text-md-right">{{ __('Email') }}</label>
-
-                        <div class="col-md-9">
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email', $user->email) }}" autocomplete="email">
-
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-                    
-                    <div class="form-group row">
-                      <label for="address" class="col-md-3 col-form-label text-md-right">{{ __('Address') }}</label>
-
-                      <div class="col-md-9">
-                          <input id="address" type="address" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address', $user->address) }}" autocomplete="email">
-
-                          @error('address')
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                          @enderror
-                      </div>
-                    </div>
-
-                    <div class="form-group row">
-                      <label for="phonenumber" class="col-md-3 col-form-label text-md-right">{{ __('Phone') }}</label>
-
-                      <div class="col-md-9">
-                          <input id="phonenumber" type="phonenumber" class="form-control @error('phonenumber') is-invalid @enderror" name="phonenumber" value="{{ old('phonenumber', $user->phonenumber) }}" autocomplete="email">
-
-                          @error('phonenumber')
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                          @enderror
-                      </div>
-                    </div>
-                    
-                    <div class="form-group row">
-                      <label for="gender" class="col-md-3 col-form-label text-md-right">{{ __('Gender') }}</label>
-
-                      <div class="col-md-9">
-                          <input id="gender" type="gender" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender', $user->gender) }}" autocomplete="email">
-
-                          @error('gender')
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                          @enderror
-                      </div>
-                    </div>
-
-                    <div class="form-group row mb-0">
-                        <div class="col-md-6 offset-md-4">
-                            <button type="submit" class="btn btn-outline-light">
-                                Update Profile
-                            </button>
-                        </div>
-                    </div>
-                </form>
-              </div>
-          </div>
-        </div>
+    <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h3><br><br></h3>
+        <h2>Contact</h2>
+        <p>Contact Us</p>
       </div>
-    </section>
+    </div>
+    <div class="container" data-aos="fade-up">
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <div class="info">
+            <div class="open-hours">
+              <i class="icofont-clock-time icofont-rotate-90"></i>
+              <h4>Open Hours:</h4>
+              <p>
+                Monday-Saturday:<br>
+                11:00 AM - 22:00 PM
+              </p>
+            </div>
 
+            <div class="email">
+              <i class="icofont-envelope"></i>
+              <h4>Email:</h4>
+              <p>cemalcemil@gmail.com</p>
+            </div>
+
+            <div class="phone">
+              <i class="icofont-phone"></i>
+              <h4>Call:</h4>
+              <p>+62 81234567890</p>
+            </div>
+
+          </div>
+
+        </div>
+        
+        <div class="col-lg-8 mt-5 mt-lg-0">
+            <!-- Success message -->
+            @if(Session::has('success'))
+              <div class="alert alert-success">
+                  {{Session::get('success')}}
+              </div>
+            @endif
+
+            <form action="" method="post" action="{{ route('contact.store') }}">
+            @csrf
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="8" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validate"></div>
+            </div>
+            <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
+          </form>
+
+        </div>
+
+      </div>
+    </div> 
+  </section>  
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

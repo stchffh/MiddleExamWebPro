@@ -19,7 +19,7 @@ Route::post('login', 'AuthController@login');
 Route::get('register', 'AuthController@showFormRegister')->name('register');
 Route::post('register', 'AuthController@register');
 Route::get('home', 'HomeController@index')->name('home');
- 
+     
 Route::group(['middleware' => 'auth'], function () {
  
     Route::get('home', 'HomeController@index')->name('home');
@@ -28,6 +28,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::patch('profile', 'ProfileController@update')->name('profile.update');
     Route::get('logout', 'AuthController@logout')->name('logout');
     Route::resource('order', 'OrderController');
+    Route::get('contact', 'ContactUsFormController@createForm');
+    Route::post('contact', 'ContactUsFormController@ContactUsForm')->name('contact.store');
     Route::resource('orderdetail', 'OrderDetailController');
  
 });
