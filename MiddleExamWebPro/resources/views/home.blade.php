@@ -129,24 +129,27 @@
           <div class="col-lg-4">
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
               <span>01</span>
-              <h4>Lorem Ipsum</h4>
-              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+              <h4>100% Home Made</h4>
+              <p>Every dish at Charntra is made onsite from scratch. 
+                y creating everything from the start, 
+                we have 100% control over the ingredients used, the quality and the freshness of the dish. You will taste the difference.
+              </p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box" data-aos="zoom-in" data-aos-delay="200">
               <span>02</span>
-              <h4>Repellat Nihil</h4>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+              <h4>Superior Value</h4>
+              <p>You will receive a fresh 100% home  made meals in a portion size that won’t leave you scrapping your plate.<br><br><br><br></p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box" data-aos="zoom-in" data-aos-delay="300">
               <span>03</span>
-              <h4> Ad ad velit qui</h4>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+              <h4> Cozy Place</h4>
+              <p>Cemal-Cemil is an ideal place for Celebrations , Corporate Lunches / Dinners or just a casual meal with family and friends.<br><br><br></p>
             </div>
           </div>
 
