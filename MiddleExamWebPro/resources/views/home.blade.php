@@ -53,7 +53,7 @@
           <li><a href="#specials">Specials</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li class="book-a-table text-center"><a href="#book-a-table">Order Now</a></li>
+          <li class="book-a-table text-center"><a href="{{ route('order.index')}}">Order Now</a></li>
           <li><a href="{{ route('logout') }}" class="btn btn-danger">Logout</a></li>
         </ul>
       </nav><!-- .nav-menu -->

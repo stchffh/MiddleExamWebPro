@@ -22,10 +22,11 @@ Route::get('login', 'AuthController@showFormLogin')->name('login');
 Route::post('login', 'AuthController@login');
 Route::get('register', 'AuthController@showFormRegister')->name('register');
 Route::post('register', 'AuthController@register');
+Route::get('home', 'HomeController@index')->name('home');
  
 Route::group(['middleware' => 'auth'], function () {
  
-    Route::get('home', 'HomeController@index')->name('home');
     Route::get('logout', 'AuthController@logout')->name('logout');
+    Route::resource('order', 'OrderController');
  
 });
