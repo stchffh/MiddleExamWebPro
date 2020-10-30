@@ -31,8 +31,8 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
-        <i class="icofont-phone"></i> +62 81234567890&nbsp;&nbsp;
-        <span class="d-none d-lg-inline-block"><i class="icofont-location-pin"></i> Sukolilo, Surabaya</span>
+        <i class="icofont-phone"></i> +1 5589 55488 55
+        <span class="d-none d-lg-inline-block"><i class="icofont-clock-time icofont-rotate-180"></i> Mon-Sat: 11:00 AM - 23:00 PM</span>
       </div>
     </div>
   </div>
@@ -53,13 +53,26 @@
 
     </div>
   </header><!-- End Header -->
+      <script type="text/javascript">
+    var clicks = 0;
+    function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    
+    function onClickk() {
+        clicks -= 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    
+    </script>
 
   <main id="main">
   <section id="menu" class="menu section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <p><br></p>
+          <p>:Menu:</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -86,9 +99,9 @@
           </div>
 
           <div class="col-lg-6 menu-item filter-starters">
-            <button type="min" class="btn btn-light">-</button>
-            <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="plus" class="btn btn-light">+</button>
+            <button type="button" class="btn btn-secondary" onClick="onClick()">+</button>
+            <input type="hidden" id="quantity" name="quantity" value="1" min="1" max="100"  />
+            <button type="button" class="btn btn-secondary" onClick="onClickk()">-</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
@@ -102,9 +115,9 @@
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
-            <button type="min" class="btn btn-light">-</button>
-            <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="plus" class="btn btn-light">+</button>
+            <button type="button" class="btn btn-secondary" onClick="onClick()">+</button>
+            <input type="hidden" id="quantity" name="quantity" value="1" min="1" max="100"  />
+            <button type="button" class="btn btn-secondary" onClick="onClickk()">-</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-starters">
@@ -118,9 +131,9 @@
           </div>
 
           <div class="col-lg-6 menu-item filter-starters">
-            <button type="min" class="btn btn-light">-</button>
-            <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="plus" class="btn btn-light">+</button>
+            <button type="button" class="btn btn-secondary" onClick="onClick()">+</button>
+            <input type="hidden" id="quantity" name="quantity" value="1" min="1" max="100"  />
+            <button type="button" class="btn btn-secondary" onClick="onClickk()">-</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
@@ -134,9 +147,9 @@
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
-            <button type="min" class="btn btn-light">-</button>
-            <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="plus" class="btn btn-light">+</button>
+            <button type="button" class="btn btn-secondary" onClick="onClick()">+</button>
+            <input type="hidden" id="quantity" name="quantity" value="1" min="1" max="100"  />
+            <button type="button" class="btn btn-secondary" onClick="onClickk()">-</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
@@ -150,9 +163,9 @@
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
-            <button type="min" class="btn btn-light">-</button>
-            <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="plus" class="btn btn-light">+</button>
+            <button type="button" class="btn btn-secondary" onClick="onClick()">+</button>
+            <input type="hidden" id="quantity" name="quantity" value="1" min="1" max="100"  />
+            <button type="button" class="btn btn-secondary" onClick="onClickk()">-</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-starters">
@@ -166,9 +179,9 @@
           </div>
 
           <div class="col-lg-6 menu-item filter-starters">
-            <button type="min" class="btn btn-light">-</button>
-            <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="plus" class="btn btn-light">+</button>
+            <button type="button" class="btn btn-secondary" onClick="onClick()">+</button>
+            <input type="hidden" id="quantity" name="quantity" value="1" min="1" max="100"  />
+            <button type="button" class="btn btn-secondary" onClick="onClickk()">-</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
@@ -182,9 +195,9 @@
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
-            <button type="min" class="btn btn-light">-</button>
-            <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="plus" class="btn btn-light">+</button>
+            <button type="button" class="btn btn-secondary" onClick="onClick()">+</button>
+            <input type="hidden" id="quantity" name="quantity" value="1" min="1" max="100"  />
+            <button type="button" class="btn btn-secondary" onClick="onClickk()">-</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
@@ -198,9 +211,9 @@
           </div>
 
           <div class="col-lg-6 menu-item filter-salads">
-            <button type="min" class="btn btn-light">-</button>
-            <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="plus" class="btn btn-light">+</button>
+            <button type="button" class="btn btn-secondary" onClick="onClick()">+</button>
+            <input type="hidden" id="quantity" name="quantity" value="1" min="1" max="100"  />
+            <button type="button" class="btn btn-secondary" onClick="onClickk()">-</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
@@ -214,30 +227,32 @@
           </div>
 
           <div class="col-lg-6 menu-item filter-specialty">
-            <button type="min" class="btn btn-light">-</button>
-            <input type="text" name="count" class="form-input" placeholder="0">
-            <button type="plus" class="btn btn-light">+</button>
+            <button type="button" class="btn btn-secondary" onClick="onClick()">+</button>
+            <input type="hidden" id="quantity" name="quantity" value="1" min="1" max="100"  />
+            <button type="button" class="btn btn-secondary" onClick="onClickk()">-</button>
           </div>
 
           <div class="col-lg-6 menu-item filter-starters filter-salads filter-specialty">
             <div class="menu-content">
-              <p>Total Order</p>
             </div>
           </div>
 
           <div class="col-lg-6 menu-item filter-starters filter-salads filter-specialty">
-            <input type="text" name="totalorder" class="form-input" placeholder="0">
+            <p>Total Order: <a id="clicks">0</a></p>
           </div>
         </div>
 
         <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
-            <a href="{{ route('orderdetail.index') }}"><button type="submit order" class="btn btn-outline-light btn-block">SUBMIT ORDER</button> </a>
+          <div class="col-md-12 text-center">        
+            <a href=#>
+            <button type="submit order" class="btn btn-warning">SUBMIT ORDER</button> </a>
+          </div>
         </div>
       </div>
     </section>
 
+    
   </main><!-- End #main -->
-
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="footer-top">
@@ -248,9 +263,32 @@
             <div class="footer-info">
               <h3>Cemal-Cemil</h3>
               <p>
-                <strong>Phone:</strong> +62 81234567890<br>
-                <strong>Email:</strong> cemalcemil@gmail.com<br>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
               </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </div>
@@ -287,4 +325,4 @@
 
 </body>
 
-</html> 
+</html>
