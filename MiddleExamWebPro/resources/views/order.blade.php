@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Cemal-Cemil Login-Register</title>
+  <title>Order</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -23,7 +23,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -42,70 +41,33 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Cemal-Cemil</a></h1>
+      <h1 class="logo mr-auto"><a href="index.html">Restaurantly</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      {{-- <nav class="nav-menu d-none d-lg-block">
+      <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="book-a-table text-center"><a href="#book-a-table">Register</a></li>
-          <li class="book-a-table text-center"><a href="#book-a-table">Login</a></li>
+          <li class="book-a-table text-center"><a href="{{ route('home')}}">Back</a></li>
         </ul>
-      </nav><!-- .nav-menu --> --}}
+      </nav><!-- .nav-menu -->
 
     </div>
   </header><!-- End Header -->
 
   <main id="main">
+    <section class="breadcrumbs">
+      <div class="container">
+
+
+
+      </div>
+    </section>
+
     <section class="inner-page">
       <div class="container">
-        <div class="d-flex justify-content-center align-items-center mt-5">
-          <div class="card">
-            <div class="card-header">
-              <h3 class="text-center">Form Login</h3>
-          </div>
-          <form action="{{ route('login') }}" method="post">
-          @csrf
-          <div class="card-body">
-              @if(session('errors'))
-                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                      Something it's wrong:
-                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                      </button>
-                      <ul>
-                      @foreach ($errors->all() as $error)
-                      <li>{{ $error }}</li>
-                      @endforeach
-                      </ul>
-                  </div>
-              @endif
-              @if (Session::has('success'))
-                  <div class="alert alert-success">
-                      {{ Session::get('success') }}
-                  </div>
-              @endif
-              @if (Session::has('error'))
-                  <div class="alert alert-danger">
-                      {{ Session::get('error') }}
-                  </div>
-              @endif
-              <div class="form-group">
-                  <label for=""><strong>Email</strong></label>
-                  <input type="text" name="email" class="form-control" placeholder="Email">
-              </div>
-              <div class="form-group">
-                  <label for=""><strong>Password</strong></label>
-                  <input type="password" name="password" class="form-control" placeholder="Password">
-              </div>
-          </div>
-          <div class="card-footer">
-              <button type="submit" class="btn btn-outline-light btn-block">Log In</button>
-              <p class="text-center">Havent had an account? <a href="{{ route('register') }}" style="color: black">Register</a> now!</p>
-          </div>
-          </form>
-          </div>
-      </div>
+        <p>
+          Example inner page template
+        </p>
       </div>
     </section>
 
@@ -121,6 +83,8 @@
             <div class="footer-info">
               <h3>Cemal-Cemil</h3>
               <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
                 <strong>Phone:</strong> +1 5589 55488 55<br>
                 <strong>Email:</strong> info@example.com<br>
               </p>
@@ -133,6 +97,18 @@
               </div>
             </div>
           </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </div>
@@ -169,4 +145,4 @@
 
 </body>
 
-</html>
+</html> 

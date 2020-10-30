@@ -41,20 +41,30 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Cemal-Cemil</a></h1>
+      <h1 class="logo mr-auto"><a href="{{ route('home')}}index.html">Cemal-Cemil</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Dashboard</a></li>
+          <li class="active"><a href="{{ route('home')}}">Dashboard</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#menu">Menu</a></li>
           <li><a href="#specials">Specials</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li class="book-a-table text-center"><a href="#book-a-table">Order Now</a></li>
-          <li><a href="{{ route('logout') }}" class="btn btn-danger">Logout</a></li>
+          <li class="book-a-table text-center"><a href="{{ route('order.index')}}">Order Now</a></li>
+          <li class="dropdown">
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ Auth::user()->name }}</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color: black">
+                <a class="dropdown-item" href="{{ route('profile') }}">
+                    {{ __('Profile') }}
+                </a>
+                <a href="{{ route('logout') }}" class="dropdown-item">Logout</a>
+            </div>
+          </li>
         </ul>
       </nav><!-- .nav-menu -->
 

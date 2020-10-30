@@ -42,16 +42,16 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Cemal-Cemil</a></h1>
+      <h1 class="logo mr-auto"><a href="{{ route('home')}}">Cemal-Cemil</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      {{-- <nav class="nav-menu d-none d-lg-block">
+      <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="book-a-table text-center"><a href="#book-a-table">Register</a></li>
-          <li class="book-a-table text-center"><a href="#book-a-table">Login</a></li>
+          <li class="book-a-table text-center"><a href="{{ route('home')}}">Back</a></li>
         </ul>
-      </nav><!-- .nav-menu --> --}}
+      </nav><!-- .nav-menu -->
+
 
     </div>
   </header><!-- End Header -->
@@ -62,50 +62,94 @@
         <div class="d-flex justify-content-center align-items-center mt-5">
           <div class="card">
             <div class="card-header">
-              <h3 class="text-center">Form Login</h3>
-          </div>
-          <form action="{{ route('login') }}" method="post">
-          @csrf
-          <div class="card-body">
-              @if(session('errors'))
-                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                      Something it's wrong:
-                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                      </button>
-                      <ul>
-                      @foreach ($errors->all() as $error)
-                      <li>{{ $error }}</li>
-                      @endforeach
-                      </ul>
-                  </div>
-              @endif
-              @if (Session::has('success'))
-                  <div class="alert alert-success">
-                      {{ Session::get('success') }}
-                  </div>
-              @endif
-              @if (Session::has('error'))
-                  <div class="alert alert-danger">
-                      {{ Session::get('error') }}
-                  </div>
-              @endif
-              <div class="form-group">
-                  <label for=""><strong>Email</strong></label>
-                  <input type="text" name="email" class="form-control" placeholder="Email">
+                <h3 class="text-centered">Update Profile</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ route('profile') }}">
+                    @method('patch')
+                    @csrf
+
+                    <div class="form-group row">
+                        <label for="name" class="col-md-3 col-form-label text-md-right">{{ __('Name') }}</label>
+
+                        <div class="col-md-9">
+                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', $user->name) }}" autocomplete="name" autofocus>
+
+                            @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="email" class="col-md-3 col-form-label text-md-right">{{ __('Email') }}</label>
+
+                        <div class="col-md-9">
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email', $user->email) }}" autocomplete="email">
+
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                      <label for="address" class="col-md-3 col-form-label text-md-right">{{ __('Address') }}</label>
+
+                      <div class="col-md-9">
+                          <input id="address" type="address" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address', $user->address) }}" autocomplete="email">
+
+                          @error('address')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label for="phonenumber" class="col-md-3 col-form-label text-md-right">{{ __('Phone') }}</label>
+
+                      <div class="col-md-9">
+                          <input id="phonenumber" type="phonenumber" class="form-control @error('phonenumber') is-invalid @enderror" name="phonenumber" value="{{ old('phonenumber', $user->phonenumber) }}" autocomplete="email">
+
+                          @error('phonenumber')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
+                      </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                      <label for="gender" class="col-md-3 col-form-label text-md-right">{{ __('Gender') }}</label>
+
+                      <div class="col-md-9">
+                          <input id="gender" type="gender" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender', $user->gender) }}" autocomplete="email">
+
+                          @error('gender')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
+                      </div>
+                    </div>
+
+                    <div class="form-group row mb-0">
+                        <div class="col-md-6 offset-md-4">
+                            <button type="submit" class="btn btn-outline-light">
+                                Update Profile
+                            </button>
+                        </div>
+                    </div>
+                </form>
               </div>
-              <div class="form-group">
-                  <label for=""><strong>Password</strong></label>
-                  <input type="password" name="password" class="form-control" placeholder="Password">
-              </div>
           </div>
-          <div class="card-footer">
-              <button type="submit" class="btn btn-outline-light btn-block">Log In</button>
-              <p class="text-center">Havent had an account? <a href="{{ route('register') }}" style="color: black">Register</a> now!</p>
-          </div>
-          </form>
-          </div>
-      </div>
+        </div>
       </div>
     </section>
 

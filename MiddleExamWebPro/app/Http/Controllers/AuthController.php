@@ -30,10 +30,10 @@ class AuthController extends Controller
         ];
  
         $messages = [
-            'email.required'        => 'Email wajib diisi',
-            'email.email'           => 'Email tidak valid',
-            'password.required'     => 'Password wajib diisi',
-            'password.string'       => 'Password harus berupa string'
+            'email.required'        => 'Email is required',
+            'email.email'           => 'Email unvalid',
+            'password.required'     => 'Password is required',
+            'password.string'       => 'Password unvalid'
         ];
  
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -56,7 +56,7 @@ class AuthController extends Controller
         } else { // false
  
             //Login Fail
-            Session::flash('error', 'Email atau password salah');
+            Session::flash('error', 'Email or password is wrong');
             return redirect()->route('login');
         }
  
@@ -72,18 +72,24 @@ class AuthController extends Controller
         $rules = [
             'name'                  => 'required|min:3|max:35',
             'email'                 => 'required|email|unique:users,email',
+            'address'               => 'required|string',
+            'phonenumber'           => 'required|string',
+            'gender'                => 'required|string',
             'password'              => 'required|confirmed'
         ];
  
         $messages = [
-            'name.required'         => 'Nama Lengkap wajib diisi',
-            'name.min'              => 'Nama lengkap minimal 3 karakter',
-            'name.max'              => 'Nama lengkap maksimal 35 karakter',
-            'email.required'        => 'Email wajib diisi',
-            'email.email'           => 'Email tidak valid',
+            'name.required'         => 'Name must be filled',
+            'name.min'              => 'Name must be 3 or more characters',
+            'name.max'              => 'Name must be less than 35 characters',
+            'email.required'        => 'Email must be filled',
+            'email.email'           => 'Email unvalid',
             'email.unique'          => 'Email sudah terdaftar',
-            'password.required'     => 'Password wajib diisi',
-            'password.confirmed'    => 'Password tidak sama dengan konfirmasi password'
+            'address.required'      => 'Address must be filled',
+            'phonenumber.required'  => 'Phone number must be filled',
+            'gender.required'       => 'Gender must be filled',
+            'password.required'     => 'Password must be filled',
+            'password.confirmed'    => 'Password unmatched'
         ];
  
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -95,15 +101,18 @@ class AuthController extends Controller
         $user = new User;
         $user->name = ucwords(strtolower($request->name));
         $user->email = strtolower($request->email);
+        $user->address = strtolower($request->address);
+        $user->phonenumber = strtolower($request->phonenumber);
+        $user->gender = strtolower($request->gender);
         $user->password = Hash::make($request->password);
         $user->email_verified_at = \Carbon\Carbon::now();
         $simpan = $user->save();
  
         if($simpan){
-            Session::flash('success', 'Register berhasil! Silahkan login untuk mengakses data');
+            Session::flash('success', 'Register success! Please log in..');
             return redirect()->route('login');
         } else {
-            Session::flash('errors', ['' => 'Register gagal! Silahkan ulangi beberapa saat lagi']);
+            Session::flash('errors', ['' => 'Register failed! Please retry another moment..']);
             return redirect()->route('register');
         }
     }

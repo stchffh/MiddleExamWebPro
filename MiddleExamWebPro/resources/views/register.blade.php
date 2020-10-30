@@ -74,25 +74,37 @@
                     </div>
                 @endif
                 <div class="form-group">
-                    <label for=""><strong>Nama Lengkap</strong></label>
-                    <input type="text" name="name" class="form-control" placeholder="Nama Lengkap">
+                    <label for=""><strong>Name</strong></label>
+                    <input type="text" name="name" class="form-control" placeholder="Name">
                 </div>
                 <div class="form-group">
                     <label for=""><strong>Email</strong></label>
                     <input type="text" name="email" class="form-control" placeholder="Email">
                 </div>
                 <div class="form-group">
+                  <label for=""><strong>Address</strong></label>
+                  <input type="text" name="address" class="form-control" placeholder="Address">
+                </div>
+                <div class="form-group">
+                  <label for=""><strong>Phone Number</strong></label>
+                  <input type="text" name="phonenumber" class="form-control" placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                  <label for=""><strong>Gender</strong></label>
+                  <input type="text" name="gender" class="form-control" placeholder="Gender">
+                </div>
+                <div class="form-group">
                     <label for=""><strong>Password</strong></label>
                     <input type="password" name="password" class="form-control" placeholder="Password">
                 </div>
                 <div class="form-group">
-                    <label for=""><strong>Konfirmasi Password</strong></label>
+                    <label for=""><strong>Confirm Password</strong></label>
                     <input type="password" name="password_confirmation" class="form-control" placeholder="Password">
                 </div>
             </div>
             <div class="card-footer">
                 <button type="submit" class="btn btn-outline-light btn-block">Register</button>
-                <p class="text-center">Sudah punya akun? <a href="{{ route('login') }}" style="color: black">Login</a> sekarang!</p>
+                <p class="text-center">Already have account? <a href="{{ route('login') }}" style="color: black">Login</a> now!</p>
             </div>
             </form>
           </div>
@@ -128,7 +140,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container"> 
       <div class="copyright">
         &copy; Copyright <strong><span>Cemal-Cemil</span></strong>. All Rights Reserved
       </div>
