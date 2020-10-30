@@ -28,5 +28,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::patch('profile', 'ProfileController@update')->name('profile.update');
     Route::get('logout', 'AuthController@logout')->name('logout');
     Route::resource('order', 'OrderController');
+    Route::resource('orderdetail', 'OrderDetailController');
  
 });

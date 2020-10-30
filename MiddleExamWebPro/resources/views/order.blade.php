@@ -231,7 +231,7 @@
         </div>
 
         <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
-            <button type="submit order" class="btn btn-outline-light btn-block">SUBMIT ORDER</button>
+            <a href="{{ route('orderdetail.index') }}"><button type="submit order" class="btn btn-outline-light btn-block">SUBMIT ORDER</button> </a>
         </div>
       </div>
     </section>
